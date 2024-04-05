@@ -1,0 +1,3 @@
+[console_scripts]
+pub_sub = Ros2_Midterm.map_pub:main
+

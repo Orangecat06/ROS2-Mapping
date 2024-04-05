@@ -1,0 +1,31 @@
+running egg_info
+creating ../../build/Ros2_Midterm/Ros2_Midterm.egg-info
+writing ../../build/Ros2_Midterm/Ros2_Midterm.egg-info/PKG-INFO
+writing dependency_links to ../../build/Ros2_Midterm/Ros2_Midterm.egg-info/dependency_links.txt
+writing entry points to ../../build/Ros2_Midterm/Ros2_Midterm.egg-info/entry_points.txt
+writing requirements to ../../build/Ros2_Midterm/Ros2_Midterm.egg-info/requires.txt
+writing top-level names to ../../build/Ros2_Midterm/Ros2_Midterm.egg-info/top_level.txt
+writing manifest file '../../build/Ros2_Midterm/Ros2_Midterm.egg-info/SOURCES.txt'
+reading manifest file '../../build/Ros2_Midterm/Ros2_Midterm.egg-info/SOURCES.txt'
+writing manifest file '../../build/Ros2_Midterm/Ros2_Midterm.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/controlslab/Ros2_Midterm/build/Ros2_Midterm/build
+creating /home/controlslab/Ros2_Midterm/build/Ros2_Midterm/build/lib
+creating /home/controlslab/Ros2_Midterm/build/Ros2_Midterm/build/lib/Ros2_Midterm
+copying Ros2_Midterm/__init__.py -> /home/controlslab/Ros2_Midterm/build/Ros2_Midterm/build/lib/Ros2_Midterm
+running install
+running install_lib
+creating /home/controlslab/Ros2_Midterm/install/Ros2_Midterm/lib/python3.10/site-packages/Ros2_Midterm
+copying /home/controlslab/Ros2_Midterm/build/Ros2_Midterm/build/lib/Ros2_Midterm/__init__.py -> /home/controlslab/Ros2_Midterm/install/Ros2_Midterm/lib/python3.10/site-packages/Ros2_Midterm
+byte-compiling /home/controlslab/Ros2_Midterm/install/Ros2_Midterm/lib/python3.10/site-packages/Ros2_Midterm/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/controlslab/Ros2_Midterm/install/Ros2_Midterm/share/ament_index
+creating /home/controlslab/Ros2_Midterm/install/Ros2_Midterm/share/ament_index/resource_index
+creating /home/controlslab/Ros2_Midterm/install/Ros2_Midterm/share/ament_index/resource_index/packages
+copying resource/Ros2_Midterm -> /home/controlslab/Ros2_Midterm/install/Ros2_Midterm/share/ament_index/resource_index/packages
+copying package.xml -> /home/controlslab/Ros2_Midterm/install/Ros2_Midterm/share/Ros2_Midterm
+running install_egg_info
+Copying ../../build/Ros2_Midterm/Ros2_Midterm.egg-info to /home/controlslab/Ros2_Midterm/install/Ros2_Midterm/lib/python3.10/site-packages/Ros2_Midterm-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/controlslab/Ros2_Midterm/build/Ros2_Midterm/install.log'

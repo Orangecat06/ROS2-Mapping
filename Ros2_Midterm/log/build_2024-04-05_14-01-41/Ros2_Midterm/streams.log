@@ -1,0 +1,25 @@
+[0.418s] Invoking command in '/home/controlslab/Ros2_Midterm/src/Ros2_Midterm': PYTHONPATH=/home/controlslab/Ros2_Midterm/build/Ros2_Midterm/prefix_override:/home/controlslab/Ros2_Midterm/install/Ros2_Midterm/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/Ros2_Midterm build --build-base /home/controlslab/Ros2_Midterm/build/Ros2_Midterm/build install --record /home/controlslab/Ros2_Midterm/build/Ros2_Midterm/install.log --single-version-externally-managed
+[0.578s] running egg_info
+[0.579s] writing ../../build/Ros2_Midterm/Ros2_Midterm.egg-info/PKG-INFO
+[0.579s] writing dependency_links to ../../build/Ros2_Midterm/Ros2_Midterm.egg-info/dependency_links.txt
+[0.579s] writing entry points to ../../build/Ros2_Midterm/Ros2_Midterm.egg-info/entry_points.txt
+[0.579s] writing requirements to ../../build/Ros2_Midterm/Ros2_Midterm.egg-info/requires.txt
+[0.579s] writing top-level names to ../../build/Ros2_Midterm/Ros2_Midterm.egg-info/top_level.txt
+[0.580s] reading manifest file '../../build/Ros2_Midterm/Ros2_Midterm.egg-info/SOURCES.txt'
+[0.581s] writing manifest file '../../build/Ros2_Midterm/Ros2_Midterm.egg-info/SOURCES.txt'
+[0.581s] running build
+[0.581s] running build_py
+[0.581s] copying Ros2_Midterm/map_pub.py -> /home/controlslab/Ros2_Midterm/build/Ros2_Midterm/build/lib/Ros2_Midterm
+[0.581s] running install
+[0.582s] running install_lib
+[0.582s] copying /home/controlslab/Ros2_Midterm/build/Ros2_Midterm/build/lib/Ros2_Midterm/map_pub.py -> /home/controlslab/Ros2_Midterm/install/Ros2_Midterm/lib/python3.10/site-packages/Ros2_Midterm
+[0.583s] byte-compiling /home/controlslab/Ros2_Midterm/install/Ros2_Midterm/lib/python3.10/site-packages/Ros2_Midterm/map_pub.py to map_pub.cpython-310.pyc
+[0.584s] running install_data
+[0.584s] copying package.xml -> /home/controlslab/Ros2_Midterm/install/Ros2_Midterm/share/Ros2_Midterm
+[0.584s] running install_egg_info
+[0.586s] removing '/home/controlslab/Ros2_Midterm/install/Ros2_Midterm/lib/python3.10/site-packages/Ros2_Midterm-0.0.0-py3.10.egg-info' (and everything under it)
+[0.586s] Copying ../../build/Ros2_Midterm/Ros2_Midterm.egg-info to /home/controlslab/Ros2_Midterm/install/Ros2_Midterm/lib/python3.10/site-packages/Ros2_Midterm-0.0.0-py3.10.egg-info
+[0.587s] running install_scripts
+[0.598s] Installing pub_sub script to /home/controlslab/Ros2_Midterm/install/Ros2_Midterm/lib/Ros2_Midterm
+[0.598s] writing list of installed files to '/home/controlslab/Ros2_Midterm/build/Ros2_Midterm/install.log'
+[0.612s] Invoked command in '/home/controlslab/Ros2_Midterm/src/Ros2_Midterm' returned '0': PYTHONPATH=/home/controlslab/Ros2_Midterm/build/Ros2_Midterm/prefix_override:/home/controlslab/Ros2_Midterm/install/Ros2_Midterm/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/Ros2_Midterm build --build-base /home/controlslab/Ros2_Midterm/build/Ros2_Midterm/build install --record /home/controlslab/Ros2_Midterm/build/Ros2_Midterm/install.log --single-version-externally-managed

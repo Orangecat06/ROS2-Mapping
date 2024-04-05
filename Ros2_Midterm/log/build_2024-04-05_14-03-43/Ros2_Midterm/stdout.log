@@ -1,0 +1,19 @@
+running egg_info
+writing ../../build/Ros2_Midterm/Ros2_Midterm.egg-info/PKG-INFO
+writing dependency_links to ../../build/Ros2_Midterm/Ros2_Midterm.egg-info/dependency_links.txt
+writing entry points to ../../build/Ros2_Midterm/Ros2_Midterm.egg-info/entry_points.txt
+writing requirements to ../../build/Ros2_Midterm/Ros2_Midterm.egg-info/requires.txt
+writing top-level names to ../../build/Ros2_Midterm/Ros2_Midterm.egg-info/top_level.txt
+reading manifest file '../../build/Ros2_Midterm/Ros2_Midterm.egg-info/SOURCES.txt'
+writing manifest file '../../build/Ros2_Midterm/Ros2_Midterm.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/controlslab/Ros2_Midterm/install/Ros2_Midterm/lib/python3.10/site-packages/Ros2_Midterm-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/Ros2_Midterm/Ros2_Midterm.egg-info to /home/controlslab/Ros2_Midterm/install/Ros2_Midterm/lib/python3.10/site-packages/Ros2_Midterm-0.0.0-py3.10.egg-info
+running install_scripts
+Installing pub_sub script to /home/controlslab/Ros2_Midterm/install/Ros2_Midterm/lib/Ros2_Midterm
+writing list of installed files to '/home/controlslab/Ros2_Midterm/build/Ros2_Midterm/install.log'
