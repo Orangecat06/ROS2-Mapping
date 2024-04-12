@@ -7,3 +7,5 @@ Nested if statements are created to have the robot map out a room using data fro
 Here are some example maps created:
 ![screenshot](IMG_7937.jpg)
 Here is a video of the robot mapping:
+https://youtube.com/shorts/5hRk7LOxFXQ?si=46OjptZYGUCOCu3B
+[![ROS2 Mapping video](https://i.stack.imgur.com/Vp2cE.png)](https://youtube.com/shorts/5hRk7LOxFXQ?si=46OjptZYGUCOCu3B)
