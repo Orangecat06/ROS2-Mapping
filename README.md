@@ -5,5 +5,5 @@ The project uses various publishers and subscribers as well as the following top
 Nested if statements are created to have the robot map out a room using data from the IR sensors. Twist is used to allow the robot to rotate and move linearly. Odometry is used to locate the robots orientation with respect to its global coordinates. 
 
 Here are some example maps created:
-
+![screenshot](IMG_7937.jpg)
 Here is a video of the robot mapping:
