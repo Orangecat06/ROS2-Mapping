@@ -1,3 +1,4 @@
+#Import all the necessary libraries
 import sys
 import rclpy
 
@@ -14,8 +15,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 import math
 
+#This allows us to change which robot we are using at ease
 namespace = 'robot_0'
 
+#Globals that track certain things, state machine, and are set values
 ir_threshold = 36
 tolerance = 0.2
 tolerance1 = 0.05
@@ -32,20 +35,27 @@ ymax = 0
 xmin = 0
 ymin = 0
 
+#Main node
 class Mapping_Midterms(Node):
     def __init__(self):
         super().__init__('mapping_midterm')
         print('IR Sensing (subscriber), Twist (publisher)')
+        #Establishing subscriptions and publishing
         self.subscription = self.create_subscription(IrIntensityVector, namespace + '/ir_intensity', self.ir_sense, qos_profile_sensor_data)
         self.subscription = self.create_subscription(Odometry, namespace + '/odom', self.odom_sense, qos_profile_sensor_data)
         self.publisher = self.create_publisher(Twist, namespace + '/cmd_vel', 10)
-        
-        self.ir_val = [0,0,0]
-        
-        self.position = [0,0,0,0]
-        self.initial_position = [0,0,0,0]
-        self.last_turn_position = [0,0,0,0]
 
+        #stores ir values
+        self.ir_val = [0,0,0]
+
+        #Stores x,y,z, and theta value
+        self.position = [0,0,0,0]
+
+        #stores initial position
+        self.initial_position = [0,0,0,0]
+        
+        self.last_turn_position = [0,0,0,0]
+        
         self.odom_status = None
         self.twist = Twist()
         self.twist.linear.x = 0.0
@@ -55,12 +65,13 @@ class Mapping_Midterms(Node):
         self.twist.angular.y = 0.0
         self.twist.angular.z = 0.0
 
-        
+    #sets the ir_val array based on data from robot ir sensors    
     def ir_sense(self, irmsg:IrIntensityVector):
         self.ir_val[0] = irmsg.readings[0].value
         self.ir_val[1] = irmsg.readings[3].value
         self.ir_val[2] = irmsg.readings[2].value
 
+    #This is the main 
     def odom_sense(self, odommsg:Odometry):
         global starting_state
         global finished_mapping
@@ -78,10 +89,12 @@ class Mapping_Midterms(Node):
         self.position[1] = odommsg.pose.pose.position._y
         self.position[2] = odommsg.pose.pose.position._z
 
+        #Produces the map
         plt.plot(self.position[0], self.position[1], 'r.')
         plt.show(block=False)
         plt.pause(0.001)
 
+        #quaternion to theta for rotation
         Qx = odommsg.pose.pose.orientation._x
         Qy = odommsg.pose.pose.orientation._y
         Qz = odommsg.pose.pose.orientation._z
@@ -92,6 +105,7 @@ class Mapping_Midterms(Node):
         degyaw = math.degrees(yaw)
         self.position[3] = degyaw
 
+        #sets the initial pposition
         if starting_state == 0:
             self.initial_position[0] = self.position[0]
             self.initial_position[1] = self.position[1]
@@ -119,10 +133,12 @@ class Mapping_Midterms(Node):
                 finished_mapping = 1
                 #print(self.initial_position)
                 #print(self.position) 
-
+        
+        #If not done mapping just move around the space
         if finished_mapping == 0:
              self.move()
 
+        #Once done mapping travel to the center and do the dance
         if finished_mapping == 1:
             xmiddle = (xmin + xmax)/2
             ymiddle = (ymin + ymax)/2
@@ -168,6 +184,7 @@ class Mapping_Midterms(Node):
                 goingtoy = goingtoy + 1
                 centerdone = 1
                 print('going to y', goingtoy)
+            #dance
             elif (centerdone == 1):
                 self.twist.angular.z = 1.0
                 self.publisher.publish(self.twist)
@@ -179,7 +196,8 @@ class Mapping_Midterms(Node):
 
                 
 
-         
+    #The main logic for moving. Uses the ir values to maintain a certain distance from the wall
+    #Based on ir values, can determine if it needs to turn
     def move(self):
         if self.ir_val[0] > 10 and self.ir_val[1] > 20: #turn right
             self.twist.linear.x = 0.225  
@@ -201,7 +219,7 @@ class Mapping_Midterms(Node):
             self.twist.linear.x = 0.225  
             self.twist.angular.z = 1.0
             self.publisher.publish(self.twist)
-            
+           
     def dance(self):
         print('Dancing')
         radius = 0.1
@@ -211,7 +229,7 @@ class Mapping_Midterms(Node):
         self.publisher.publish(self.twist)
         print("finished dance")
             
-
+#This is the main function
 def main(args=None):
     rclpy.init(args=args)
     Ir_subscriber = Mapping_Midterms()
